@@ -1,6 +1,7 @@
 ## Prerequisites
  Development files in app `folder` folder
-    Production build in `docs` folder
+ 
+ Production build in `docs` folder
 
 
 # Installing
