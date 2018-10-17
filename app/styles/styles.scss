@@ -7,11 +7,15 @@
 
   //styles for section header
   .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     height: 550px;
     background-color: $header-bg-color;
     .flex-item.text {
-      flex: 1;
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
       position: relative;
       h1 {
         position: absolute;
@@ -22,10 +26,14 @@
         left: 72px;
         bottom: 120px;
         color: $white;
-        animation: appearEffect 2s;
-        animation-timing-function: ease-in;
-        animation-delay: 0.5s;
-        animation-fill-mode: backwards;
+        -webkit-animation: appearEffect 2s;
+                animation: appearEffect 2s;
+        -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in;
+        -webkit-animation-delay: 0.5s;
+                animation-delay: 0.5s;
+        -webkit-animation-fill-mode: backwards;
+                animation-fill-mode: backwards;
         z-index: 1;
         span {
           color: $theme-yellow;
@@ -38,15 +46,23 @@
         height: 12px;
         width: 470px;
         bottom: 72px;
-        animation: 2s drawLine;
-        animation-delay: 0.5s;
-        animation-fill-mode: backwards;
+        -webkit-animation: 2s drawLine;
+                animation: 2s drawLine;
+        
+        -webkit-animation-delay: 0.5s;
+        
+                animation-delay: 0.5s;
+        -webkit-animation-fill-mode: backwards;
+                animation-fill-mode: backwards;
         z-index: 1;
       }
     }
     .flex-item.images-container {
-      flex: 1.4;
-      animation: 1.5s appearEffect;
+      -webkit-box-flex: 1.4;
+          -ms-flex: 1.4;
+              flex: 1.4;
+      -webkit-animation: 1.5s appearEffect;
+              animation: 1.5s appearEffect;
 
       .images {
         background-position: center;
@@ -77,9 +93,15 @@
   //styles for section our-projects
   .our-projects {
     .flex-item.heading-our-projects {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      align-items: center;
-      justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
       height: 250px;
       background-color: $white;
       h2 {
@@ -88,12 +110,22 @@
       }
     }
     .flex-item.gallery {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
       .bg-item {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
         position: relative;
         width: 50%;
         height: 350px;
@@ -105,6 +137,13 @@
         &.project1 {
           background-image: $theme-dark-gradient, url('../images/img1.jpg');
           &:hover {
+            background-image: -webkit-gradient(
+                linear,
+                left top, left bottom,
+                from($theme-purple-hover),
+                to($theme-purple-hover)
+              ),
+              url('../images/img1.jpg');
             background-image: linear-gradient(
                 $theme-purple-hover,
                 $theme-purple-hover
@@ -115,6 +154,14 @@
         &.project2 {
           background-image: $theme-dark-gradient, url('../images/img2.jpg');
           &:hover {
+            background-image: -webkit-gradient(
+                linear,
+                left top, left bottom,
+                from(rgba(0, 0, 0, 0.1)),
+                to(rgba(0, 0, 0, 0.3))
+              ),
+              -webkit-gradient(linear, left top, left bottom, from($theme-purple-hover), to($theme-purple-hover)),
+              url('../images/img2.jpg');
             background-image: linear-gradient(
                 rgba(0, 0, 0, 0.1),
                 rgba(0, 0, 0, 0.3)
@@ -126,6 +173,13 @@
         &.project3 {
           background-image: $theme-dark-gradient, url('../images/img3.jpg');
           &:hover {
+            background-image: -webkit-gradient(
+                linear,
+                left top, left bottom,
+                from($theme-purple-hover),
+                to($theme-purple-hover)
+              ),
+              url('../images/img3.jpg');
             background-image: linear-gradient(
                 $theme-purple-hover,
                 $theme-purple-hover
@@ -136,6 +190,13 @@
         &.project4 {
           background-image: $theme-dark-gradient, url('../images/img4.jpg');
           &:hover {
+            background-image: -webkit-gradient(
+                linear,
+                left top, left bottom,
+                from($theme-purple-hover),
+                to($theme-purple-hover)
+              ),
+              url('../images/img4.jpg');
             background-image: linear-gradient(
                 $theme-purple-hover,
                 $theme-purple-hover
@@ -146,6 +207,13 @@
         &.project5 {
           background-image: $theme-dark-gradient, url('../images/img1.jpg');
           &:hover {
+            background-image: -webkit-gradient(
+                linear,
+                left top, left bottom,
+                from($theme-purple-hover),
+                to($theme-purple-hover)
+              ),
+              url('../images/img1.jpg');
             background-image: linear-gradient(
                 $theme-purple-hover,
                 $theme-purple-hover
@@ -156,6 +224,13 @@
         &.project6 {
           background-image: $theme-dark-gradient, url('../images/img2.jpg');
           &:hover {
+            background-image: -webkit-gradient(
+                linear,
+                left top, left bottom,
+                from($theme-purple-hover),
+                to($theme-purple-hover)
+              ),
+              url('../images/img2.jpg');
             background-image: linear-gradient(
                 $theme-purple-hover,
                 $theme-purple-hover
@@ -166,6 +241,13 @@
         &.project7 {
           background-image: $theme-dark-gradient, url('../images/img3.jpg');
           &:hover {
+            background-image: -webkit-gradient(
+                linear,
+                left top, left bottom,
+                from($theme-purple-hover),
+                to($theme-purple-hover)
+              ),
+              url('../images/img3.jpg');
             background-image: linear-gradient(
                 $theme-purple-hover,
                 $theme-purple-hover
@@ -176,6 +258,13 @@
         &.project8 {
           background-image: $theme-dark-gradient, url('../images/img4.jpg');
           &:hover {
+            background-image: -webkit-gradient(
+                linear,
+                left top, left bottom,
+                from($theme-purple-hover),
+                to($theme-purple-hover)
+              ),
+              url('../images/img4.jpg');
             background-image: linear-gradient(
                 $theme-purple-hover,
                 $theme-purple-hover
@@ -190,15 +279,19 @@
         p {
           position: absolute;
           opacity: 0;
+          -webkit-transition: opacity 0.4s;
           transition: opacity 0.4s;
         }
         &:hover p {
           position: static;
           opacity: 1;
+          -webkit-transition: all 1s;
           transition: all 1s;
         }
         &:hover {
-          justify-content: space-evenly;
+          -webkit-box-pack: space-evenly;
+              -ms-flex-pack: space-evenly;
+                  justify-content: space-evenly;
         }
       }
     }
@@ -206,6 +299,8 @@
 
   //styles for section about-us
   .about-us {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     background-color: $white;
     .flex-item {
@@ -213,9 +308,14 @@
     }
     .flex-item.heading-about-us {
       width: 400px;
-      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      justify-content: flex-start;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
       position: relative;
       padding-left: 136px;
       padding-right: 24px;
@@ -233,7 +333,9 @@
       }
     }
     .flex-item.content-about-us {
-      flex: 2;
+      -webkit-box-flex: 2;
+          -ms-flex: 2;
+              flex: 2;
       padding-left: 48px;
       p {
         letter-spacing: 1px;
@@ -247,6 +349,8 @@
 
   //styles for section our-services
   .our-services {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     background-color: $white;
     padding-bottom: 96px;
@@ -255,10 +359,21 @@
 
       &.heading-our-services {
         width: 400px;
-        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: flex-start;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
         position: relative;
+        background-image: -webkit-gradient(
+          linear,
+          left top, right top,
+          from($theme-purple),
+          to($theme-purple-lighter)
+        );
         background-image: linear-gradient(
           to right,
           $theme-purple,
@@ -273,7 +388,9 @@
         }
       }
       &.list-our-services {
-        flex: 2;
+        -webkit-box-flex: 2;
+            -ms-flex: 2;
+                flex: 2;
         padding: 0 0 0 48px;
         line-height: 2.9;
         & ul {
@@ -282,38 +399,58 @@
         & ul > li {
           border-bottom: 0.1px solid #ddd;
           &:nth-child(1) {
-            animation: 1s appearEffect;
-            animation-fill-mode: backwards;
+            -webkit-animation: 1s appearEffect;
+                    animation: 1s appearEffect;
+            -webkit-animation-fill-mode: backwards;
+                    animation-fill-mode: backwards;
           }
           &:nth-child(2) {
-            animation: 1s appearEffect;
-            animation-delay: 0.1s;
-            animation-fill-mode: backwards;
+            -webkit-animation: 1s appearEffect;
+                    animation: 1s appearEffect;
+            -webkit-animation-delay: 0.1s;
+                    animation-delay: 0.1s;
+            -webkit-animation-fill-mode: backwards;
+                    animation-fill-mode: backwards;
           }
           &:nth-child(3) {
-            animation: 1s appearEffect;
-            animation-delay: 0.2s;
-            animation-fill-mode: backwards;
+            -webkit-animation: 1s appearEffect;
+                    animation: 1s appearEffect;
+            -webkit-animation-delay: 0.2s;
+                    animation-delay: 0.2s;
+            -webkit-animation-fill-mode: backwards;
+                    animation-fill-mode: backwards;
           }
           &:nth-child(4) {
-            animation: 1s appearEffect;
-            animation-delay: 0.3s;
-            animation-fill-mode: backwards;
+            -webkit-animation: 1s appearEffect;
+                    animation: 1s appearEffect;
+            -webkit-animation-delay: 0.3s;
+                    animation-delay: 0.3s;
+            -webkit-animation-fill-mode: backwards;
+                    animation-fill-mode: backwards;
           }
           &:nth-child(5) {
-            animation: 1s appearEffect;
-            animation-delay: 0.4s;
-            animation-fill-mode: backwards;
+            -webkit-animation: 1s appearEffect;
+                    animation: 1s appearEffect;
+            -webkit-animation-delay: 0.4s;
+                    animation-delay: 0.4s;
+            -webkit-animation-fill-mode: backwards;
+                    animation-fill-mode: backwards;
           }
           &:nth-child(6) {
-            animation: 1s appearEffect;
-            animation-delay: 0.5s;
-            animation-fill-mode: backwards;
+            -webkit-animation: 1s appearEffect;
+                    animation: 1s appearEffect;
+            -webkit-animation-delay: 0.5s;
+                    animation-delay: 0.5s;
+            -webkit-animation-fill-mode: backwards;
+                    animation-fill-mode: backwards;
           }
           &:nth-child(7) {
-            animation: 1s appearEffect;
-            animation-delay: 0.6s;
-            animation-fill-mode: backwards;
+            -webkit-animation: 1s appearEffect;
+                    animation: 1s appearEffect;
+            -webkit-animation-delay: 0.6s;
+                    animation-delay: 0.6s;
+            -webkit-animation-fill-mode: backwards;
+                    animation-fill-mode: backwards;
           }
           & span {
             color: #ddd;
@@ -328,17 +465,20 @@
   //styles for section know-us
   .know-us {
     height: 500px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background: -webkit-linear-gradient(
-        $theme-purple-hover-lighter,
-        $theme-purple-hover-lighter
-      ),
-      url('../images/img2.jpg');
-    background: -o-linear-gradient(
-        $theme-purple-hover-lighter,
-        $theme-purple-hover-lighter
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background: -webkit-gradient(
+        linear,
+        left top, left bottom,
+        from($theme-purple-hover-lighter),
+        to($theme-purple-hover-lighter)
       ),
       url('../images/img2.jpg');
     background: linear-gradient(
@@ -363,7 +503,15 @@
 
   //styles for section contact-form
   .contact-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    background-image: -webkit-gradient(
+      linear,
+      left top, right top,
+      from($theme-purple),
+      to($theme-purple-lighter)
+    );
     background-image: linear-gradient(
       to right,
       $theme-purple,
@@ -375,16 +523,28 @@
 
       &.heading-contact-form {
         width: 400px;
-        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: flex-start;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
         position: relative;
+        background-image: -webkit-gradient(
+          linear,
+          left top, right top,
+          from($theme-purple),
+          to($theme-purple-lighter)
+        );
         background-image: linear-gradient(
           to right,
           $theme-purple,
           $theme-purple-lighter
         );
-        box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.5);
+        -webkit-box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.5);
+                box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.5);
         padding-left: 136px;
         padding-right: 24px;
         & h2 {
@@ -400,10 +560,19 @@
         }
       }
       &.form {
-        flex: 2;
+        -webkit-box-flex: 2;
+            -ms-flex: 2;
+                flex: 2;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         padding: 0 0 0 48px;
         line-height: 2.9;
         padding-left: 96px;
@@ -434,6 +603,7 @@
           & label {
             position: absolute;
             left: 39px;
+            -webkit-transition: 0.5s all;
             transition: 0.5s all;
             cursor: pointer;
           }
@@ -451,11 +621,13 @@
               background-color: transparent;
             }
             &:focus ~ label {
-              transform: translateY(-8px);
+              -webkit-transform: translateY(-8px);
+                      transform: translateY(-8px);
               font-size: 10px;
             }
             &:valid ~ label {
-              transform: translateY(-8px);
+              -webkit-transform: translateY(-8px);
+                      transform: translateY(-8px);
               font-size: 10px;
             }
           }
@@ -478,7 +650,9 @@
   .ba-main {
     width: 100%;
     .header {
-      align-items: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       height: auto;
       padding: 48px 0;
       .flex-item.images-container {
@@ -493,7 +667,8 @@
           position: static;
           margin-top: 12px;
           width: 90%;
-          animation: 2s drawLineMobile;
+          -webkit-animation: 2s drawLineMobile;
+                  animation: 2s drawLineMobile;
         }
       }
     }
