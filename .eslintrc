@@ -1,0 +1,24 @@
+{
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "plugins": ["prettier"],
+  "extends": ['airbnb', 'prettier'],
+  "parser": "babel-eslint",
+  "settings": {
+    "import/resolver": {
+      "babel-module": {}
+    }
+  },
+  rules: {
+    "prettier/prettier": [2],
+    "import/no-extraneous-dependencies": [2, { devDependencies: true }],
+    "class-methods-use-this": [0],
+    "import/no-named-as-default": [0],
+    "import/prefer-default-export": [0],
+    "jsx-a11y/label-has-for": [0],
+    "no-underscore-dangle": [0],
+    "no-plusplus": [0]
+  }
+}
