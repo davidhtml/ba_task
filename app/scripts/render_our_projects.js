@@ -11,7 +11,7 @@ export const renderProjects = (project, i) => {
     </div>
     `;
 
-  const gallleryItem = document.querySelector('.flex-item.gallery');
+  const projectsDiv = document.querySelector('.flex-item.gallery');
 
-  gallleryItem.insertAdjacentHTML('beforeend', markup);
+  projectsDiv.insertAdjacentHTML('beforeend', markup);
 };
