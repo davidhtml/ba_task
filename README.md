@@ -1,7 +1,11 @@
 ## Prerequisites
-    Development files in ``` app``` folder
+    Development files in
+    ``` app```
+    folder
 
-    Production build in ``` docs``` folder
+    Production build in 
+    ``` docs``` 
+    folder
 
 # Installing
  npm i
