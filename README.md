@@ -1,5 +1,5 @@
 ## Prerequisites
- Development files in app `folder` folder
+ Development files in `app` folder folder
  
  Production build in `docs` folder
 
